@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Quản lý người dùng</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tên người dùng</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each userList}}
+                    <tr>
+                        <td>{{noNum}}</td>
+                        <td>{{fullname}}</td>
+                        <td>{{email}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

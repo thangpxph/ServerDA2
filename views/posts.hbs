@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Quản lý bài đăng</h3>
+            <!-- Button trigger modal -->
+            <button type="button" id="addBtn" class="btn btn-primary" data-toggle="modal" data-target="#modelId">
+                Thêm sản phẩm
+            </button>
+
+            <div class="form-group">
+                <label for="author2">Tác giả</label>
+                <select class="form-control" name="author2" id="author2">
+                    {{#each users}}
+                    <option value="{{_id}}">{{fullname}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tiêu đề</th>
+                        <th>Nội dung</th>
+                        <th>Tác giả</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    {{#each postList}}
+                    <tr>
+                        <td>{{noNum}}</td>
+                        <td>{{title}}</td>
+                        <td>{{description}}</td>
+                        <td>{{author.fullname}}</td>
+                        <td><button type="button" name="editBtn" class="editBtn" data-id={{_id}}
+                                data-authorid="{{author._id}}" class="btn btn-primary">Sửa</button></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form action="/admin/posts/create" method="post">
+                <input type="hidden" name="postId" id="postId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="heading">Thêm bài đăng</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="title">Tiêu đề</label>
+                            <input type="text" class="form-control" name="title" id="title"
+                                placeholder="Tiêu đề bài viết">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Nội dung</label>
+                            <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Tác giả</label>
+                            <select class="form-control" name="author" id="author">
+                                {{#each users}}
+                                <option value="{{_id}}">{{fullname}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                        <button type="submit" id="submitBtn" class="btn btn-primary">Đăng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('#addBtn').addEventListener('click', e => {
+        document.querySelector('#heading').innerText = "Thêm bài đăng";
+        document.querySelector('#submitBtn').innerText = "Đăng";
+        document.querySelector('#title').value = "";
+        document.querySelector('#postId').value = "";
+        document.querySelector('#description').value = "";
+        document.querySelector('#author').selectedIndex = 0
+    })
+    function addEvent() {
+        document.querySelectorAll('.editBtn').forEach(item => {
+            item.addEventListener('click', e => {
+                let pid = e.target.dataset.id;
+                let authorId = e.target.dataset.authorid;
+                let pr = e.target.parentNode.parentNode;
+                let title = pr.getElementsByTagName('td')[1].innerText;
+                let description = pr.getElementsByTagName('td')[2].innerText;
+                document.querySelector('#heading').innerText = "Sửa bài đăng";
+                document.querySelector('#submitBtn').innerText = "Cập nhật";
+                document.querySelector('#title').value = title;
+                document.querySelector('#postId').value = pid;
+                document.querySelector('#description').value = description;
+                document.querySelector('#author').value = authorId;
+                $('#modelId').modal('show')
+            })
+        })
+    }
+    addEvent();
+    document.querySelector('#author2').addEventListener('change', e => {
+        fetch(`/api/v1/posts/${e.target.value}`)
+            .then(res => res.json())
+            .then(response => {
+                console.log(response.data)
+                let innerHtml = '';
+                if (response.data.length > 0) {
+                    response.data.forEach((elm, index) => {
+                        innerHtml += `<tr>
+                        <td>${index + 1}</td>
+                        <td>${elm.title}</td>
+                        <td>${elm.description}</td>
+                        <td>${elm.author.fullname}</td>
+                        <td><button type="button" name="editBtn" class="editBtn" data-id=${elm._id}
+                                data-authorid="${elm.author._id}" class="btn btn-primary">Sửa</button></td>
+                    </tr>`
+                    })
+                } else {
+                    innerHtml += `<tr>
+                        <td>Không có bài đăng nào</td>
+                    </tr>`
+                }
+                document.querySelector('#tbody').innerHTML = innerHtml;
+                addEvent();
+            })
+    })
+</script>

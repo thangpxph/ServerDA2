@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-4">
+            <h3>Đăng nhập tài khoản</h3>
+            {{#if message}}
+            <div class="alert alert-danger" role="alert">
+                <span>{{message}}</span>
+            </div>
+            {{/if}}
+            <form action="/signin" method="post">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="">Mật khẩu</label>
+                    <input type="password" class="form-control" name="password" id="password">
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                <a name="signup" id="signup" class="btn btn-secondary" href="/signup" role="button">Đăng ký</a>
+            </form>
+        </div>
+    </div>
+</div>

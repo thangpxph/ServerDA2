@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d9158977-5054-45a0-83d0-4dd97a321abd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kKnbXVD4Vf8rHFe8tFDWXYSSWe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.19.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BaBong\Documents\Duan2\Server\ServerDA2" />
+      <recent name="C:\Users\BaBong\Documents\Duan2\Server\ServerDA2\routes" />
+      <recent name="C:\Users\BaBong\Documents\Duan2\Server\ServerDA2\views" />
+      <recent name="C:\Users\BaBong\Documents\Duan2\Server\ServerDA2\passports" />
+      <recent name="C:\Users\BaBong\Documents\Duan2\Server\ServerDA2\controllers\api" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9158977-5054-45a0-83d0-4dd97a321abd" name="Default Changelist" comment="" />
+      <created>1605458222605</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605458222605</updated>
+      <workItem from="1605458223989" duration="747000" />
+      <workItem from="1605491471665" duration="608000" />
+      <workItem from="1605509622593" duration="4272000" />
+      <workItem from="1605520524422" duration="1250000" />
+      <workItem from="1605532965856" duration="7754000" />
+      <workItem from="1605574397742" duration="33585000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605632228456">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1605632228456" />
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605630742890">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738@0.0.1366.738" timestamp="1605630742890" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1605632393623">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1605632393623" />
+    <state width="1345" height="186" key="GridCell.Tab.0.bottom" timestamp="1605632737015">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1605632737015" />
+    <state width="1345" height="186" key="GridCell.Tab.0.center" timestamp="1605632737014">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1605632737014" />
+    <state width="1345" height="186" key="GridCell.Tab.0.left" timestamp="1605632737014">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1605632737014" />
+    <state width="1345" height="186" key="GridCell.Tab.0.right" timestamp="1605632737014">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1605632737014" />
+  </component>
+</project>
